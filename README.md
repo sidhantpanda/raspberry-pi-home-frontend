@@ -19,7 +19,7 @@ yarn build
 ```
 
 ## Route your nginx to the build folder
-Follow instructions to set up [nginx on raspbian here.](https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md).
+Follow instructions to set up [nginx on raspbian here](https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md).
 
 Open the default config file
 ```
@@ -32,6 +32,11 @@ Look for the following line and edit it to the build directory of the repo:
 ++  root /path/to/repo/build;
 ```
 
-Save the file
+Save the file and start/restart nginx server
+```
+sudo service nginx restart
+```
+
+
 
 ##
