@@ -12,7 +12,8 @@ class App extends Component {
       <div>
 
         <Switch>
-          <Route exact path="/" component={LoginPage} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/login" component={LoginPage} />
           {/* <Route exact path="/login" component={LoginPage} /> */}
           {/* when none of the above match, <NoMatch> will be rendered */}
           {/* <Route component={NoMatch} /> */}
