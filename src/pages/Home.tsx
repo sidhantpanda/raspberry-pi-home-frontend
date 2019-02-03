@@ -24,7 +24,6 @@ class HomePage extends Component<HomePageProps> {
   }
   componentDidMount() {
     GetStatus().then(buttons => {
-      console.log('buttons:', buttons)
       if (buttons != null) {
         this.setState({ buttons: buttons });
       }
@@ -38,6 +37,8 @@ class HomePage extends Component<HomePageProps> {
     if (user == null) {
       return <Redirect to='/login' />
     }
+
+    // const temp = buttons.filter(button => button.id === 'button1')
 
     const UiButtons: any = buttons.map((button, key) => {
       return (
