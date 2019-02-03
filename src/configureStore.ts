@@ -2,11 +2,11 @@ import rootReducer from './reducers/rootReducer';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web and AsyncStorage for react-native
+import localForage from 'localforage';
 
 const persistConfig = {
   key: 'root',
-  storage,
+  storage: localForage,
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

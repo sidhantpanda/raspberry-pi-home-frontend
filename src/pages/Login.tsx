@@ -39,13 +39,13 @@ class LoginPage extends Component<LoginProps> {
         isUserFetchingFromServerSuccess: false,
         isUserFetchingFromServerError: false
       });
-      const user = await LoginWithGoogle(googleUser.tokenId);
+      const response = await LoginWithGoogle(googleUser.tokenId);
       this.setState({
         isUserFetchingFromServer: false,
         isUserFetchingFromServerSuccess: true,
         isUserFetchingFromServerError: false
       });
-      this.props.loginUser(user);
+      this.props.loginUser(response.user);
     } catch (err) {
       console.error('Error logging in user', err);
       this.setState({

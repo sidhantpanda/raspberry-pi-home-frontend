@@ -11,6 +11,7 @@
     "@types/react-router-dom": "^4.3.1",
     "@types/socket.io-client": "^1.4.32",
     "@types/superagent": "^3.8.6",
+    "localforage": "^1.7.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-google-login": "^5.0.0",
